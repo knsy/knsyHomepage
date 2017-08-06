@@ -1,0 +1,247 @@
+
+<div class="container">
+
+
+    <!--Top progress bar-->
+    <div class="row" id="header">
+      <div class="col-md-12">
+        <h1>Correlation App!</h1>
+        <ul class="nav nav-tabs" role="tablist" id="progressTabs">
+          <li role="presentation" class="active">
+            <a href="#tab_DailyQuestions" aria-controls="tab_DailyQuestions" role="tab" data-toggle="tab" id="applicationTabBtn">Daily Questions</a>
+          </li>
+          <li role="presentation" id="tab_Correlation_btn">
+            <a href="#tab_Correlation" aria-controls="tab_Correlation" role="tab" data-toggle="tab">Overview</a>
+          </li>
+          <li role="presentation" id="tab_NewModel_btn">
+            <a href="#tab_NewModel" aria-controls="tab_NewModel" role="tab" data-toggle="tab" >Set New Model</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--Main window-->
+	
+    <div class="row">
+      <div class="tab-content">
+
+        <!-- Daily Questions Tab -->
+        <div role="tabpanel" class="tab-pane active" id="tab_DailyQuestions">
+          <div class="col-md-3">
+		  <h3>Good Morning!</h3>
+		  <p>Here we have a list of questions that we would like to track and draw any correlations from later.</p>
+          <p>Please andswer which of these happened today and click 'submit'.</p>
+            
+				
+          </div>
+		  
+			<div class="col-md-9">
+				<form>
+				  <fieldset>
+				  <div id="questionContainer">
+					
+					
+				  </div>
+				  </fieldset>
+				</form>
+				
+				<hr class="separatorLineBreakHR">
+				
+				<div class="input-group">
+					  <a class="btn btn-primary" role="button" id="btnSubmitQuestions">Submit</a>
+				</div>
+			</div>
+		</div>
+
+        <!-- Correlation View Tab -->
+        <div role="tabpanel" class="tab-pane" id="tab_Correlation">
+          <div class="col-md-3">
+			  <h3>Correlations!</h3>
+			  <p>Let's take a look at any correlations we could find between your problems and inputs.</p>
+			  <p>Here is how to interpret the graph:</p>
+			  <p>-Top is what high occurrance of your problem correlates to.</p>
+			  <p>-Bottom is what low occurrance of your problem correlates to.</p>
+			  
+			  <p>Ta-Da!</p>
+			  
+			  <p>Eventually, we'll have better way to do correlations. Eventually.</p>
+			
+				
+          </div>
+		  
+			<div class="col-md-9">
+				<br>
+				<br>
+				
+				<div class="alert alert-danger" role="alert">
+				  <span class="sr-only">Error:</span>
+				  Not ehough days to draw any meaningful correlations. Please try again in a few days...
+				</div>
+				
+				<svg class="chart"></svg>
+
+			</div>
+        </div>
+		
+		<!-- New Model Tab -->
+        <div role="tabpanel" class="tab-pane" id="tab_NewModel">
+			<div class="col-md-3">
+			  <h3>Model Add/Reset!</h3>
+			  <p>So, you would like to modify the model.</p>
+			  <p>The process should be something like this:</p>
+			  <p>-Think about what you want to correlate. What is your problem? What are the inputs?</p>
+			  <p>-Once you click 'Reset' your entire model will be erased and you'll be able to start with a clean slate to which you can add one input by one.</p>
+			  
+			  <p>There is no edit button yet! Be careful.</p>
+			  
+			  <p>Once you click the 'Save' button, there is no going back. Your new model will be saved on the server, overwriting the previous one.</p>
+			  
+			  <p>Good Luck.</p>
+			  
+			  
+			
+				
+          </div>
+		
+          <div class="col-md-9">
+            <!-- SAMPLE FIELDS -->
+			<h2>Buttons and inputs and stufff....</h2>
+
+			<form>
+			<fieldset id="spindleInput">
+				<legend id="spindleForm">Add a new question:</legend>
+				
+				<div class="row">
+					
+					<div class="col-md-8">						
+						<div class="input-group" data-toggle="tooltip" data-placement="right" 
+						title="These are some type choices here...">
+						  <span class="input-group-addon">Descriptive Name:</span>
+						  <input type="text" class="form-control" placeholder="Descriptive Name..." name="npName" id="npName" />
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="input-group" data-toggle="tooltip" data-placement="right" 
+						title="These are some type choices here..." >
+						  <span class="input-group-addon">Type:</span>
+						  <div class="input-group-btn">
+							<div class="controls">
+								<select id="npType" class="form-control form-control-inline">
+									<option value="amount">Number</option>
+									<option value="boolean">Boolean</option>
+									<option value="rating">Rating</option>
+								</select>
+							</div>
+						  </div><!-- /btn-group -->
+						</div><!-- /input-group -->	
+					</div>
+					
+				</div> <!-- /row -->
+				
+				<br/>
+				
+				<div class="row">
+					
+					<div class="col-md-8">						
+						<div class="input-group">
+						  <span class="input-group-addon">Question:</span>
+						  <input type="text" class="form-control" placeholder="Descriptive Question..." name="npQuestion" id="npQuestion" />
+						</div>
+					</div>
+					
+					
+					<div class="col-md-4">
+						<div class="input-group">
+						  <span class="input-group-addon form-control">Is this your problem?</span>
+						  <span class="input-group-addon">
+							<input type="checkbox"  name="npProblem" id="npProblem" />
+						  </span>
+						</div>
+					</div>
+					
+
+				</div> <!-- /row -->
+				
+				<br/>
+				
+				<div class="row">	
+					<div class="col-md-2 col-md-offset-8">					
+						<div class="input-group">
+							<a class="btn btn-primary" role="button" id="npAdd">Add New Input</a>
+						</div>
+					</div>
+					
+					
+					<div class="col-md-2">					
+						<div class="input-group">
+							<a class="btn btn-primary" role="button" id="npReset">Reset Model</a>
+						</div>
+					</div>
+				</div> <!-- /row -->
+				
+			
+				
+			</fieldset>
+			</form>
+			
+			<hr class="separatorLineBreakHR">
+
+			<div id="newModelRender"></div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+</div><!--/container-->
+
+<!-- Login Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Please Login.</h4>
+		<p>After you login, it might take a little while for your data to be retrieved. Wait times of 5-10sec have been recorded in testing.</p>
+		<p>Just be patient. I believe in you. Hugs.</p>
+      </div>
+      <div class="modal-body">
+		<div class="alert alert-danger" role="alert" id="alertLogin">
+		  <span class="sr-only">Error:</span>
+		  The login information that you put in appears to be incorrect, please try again.
+		</div>
+		
+        <p>Default Login: 123:123</p>
+		<form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Login:</label>
+            <input type="text" class="form-control" id="loginName">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Password:</label>
+			<input type="password" class="form-control" id="loginPass">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="modalSubmit" >Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-------------------- END OF CONTENT------------------------->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!--https://www.bootstrapzero.com/bootstrap-template/slate-theme-->
+<script src="js/bootstrap.min.js"></script>
+
+<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+
+<!-- LOAD SCRIPTS -->
+<script src="knsyWebClient.js"></script>
+
+

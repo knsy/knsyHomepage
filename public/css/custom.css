@@ -1,0 +1,61 @@
+/*make the modal notice the newlines
+  commented out since we no longer output text to the modal
+  and it was screwing with spacing of other elements*/
+/*
+.modal-body{
+  white-space: pre; 
+}
+*/
+.separatorLineBreakHR{
+	width: 90%;
+	height: 1px;
+	font-size: 1px;
+	color: rgba(0,0,0,0);
+	line-height: 1px;
+
+	background-color: grey;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+#stock-layout-drawing{
+	border-style: solid;
+	border-width: 2px;
+	border-color: #ababab;
+	height: 400px;
+	
+	margin-bottom: 20px;
+}
+
+#header{
+	background-color: #4f596b;
+}
+
+#header h1{
+	color: #ffffff;
+}
+
+#header a{
+	color: #101010;
+}
+
+
+
+
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+
+
+.form-control-inline {
+    min-width: 0;
+    width: auto;
+    display: inline;
+}
