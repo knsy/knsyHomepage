@@ -7,14 +7,14 @@
 }
 */
 .separatorLineBreakHR{
-	width: 90%;
+	width: 100%;
 	height: 1px;
 	font-size: 1px;
-	color: rgba(0,0,0,0);
+	color: #bbbbbb;
 	line-height: 1px;
 
 	background-color: grey;
-	margin-top: 10px;
+	margin-top: 30px;
 	margin-bottom: 20px;
 }
 
@@ -58,4 +58,181 @@
     min-width: 0;
     width: auto;
     display: inline;
+}
+
+
+
+#resContainer {
+	margin:0 auto;
+	padding-top:15px;
+	text-align:left;
+	background:#000;
+	width:960px;;
+}
+
+
+#resume p.intro_text {
+clear:both;
+color:#c6bcb2;
+font-size:1.7em;
+line-height:1.7em;
+padding-top:1em;
+text-align:center;
+font-family: 'Lato', serif;
+font-weight:300;
+}
+
+
+#resume {
+	margin:5px auto 5px;
+	overflow:hidden;
+	padding:0;
+	width: 817px;
+	background-color:#272727;
+
+}
+
+#resume_border {
+	margin:50px auto 15px;
+	overflow:hidden;
+	padding:0;
+	width: 827px;
+	border: 1px solid #303030;
+	background-color:#000;
+
+}
+
+#resume h3 {
+	color:#ccc;
+	font-size:1.6em;
+	padding-top:1.2em;
+	margin:0 20px;
+	font-family: 'Lato', serif;
+	font-weight:300;
+	font-style:italic;
+}
+
+#resume h4 {
+
+	color:#ccc;
+	font-size:1em;
+	line-height:1.2em;
+	padding-top:0;
+	margin:0 45px;
+	font-family: 'Lato', serif;
+	font-weight:300;
+}
+
+#resume h5 {
+	color:#ccc;
+	font-size:1em;
+	line-height:1.5em;
+	padding-top:.4em;
+	margin:0 45px;
+	font-family: 'Lato', serif;
+	font-weight:300;
+}
+
+#resume p {
+	color:#ccc;
+	font-size:1em;
+	line-height:1.2em;
+	padding-top:.2em;
+	margin:0 0 0 115px;
+	font-family: 'Lato', serif;
+	font-weight:300;
+	
+}
+
+.company p {
+	text-align: right;
+}
+
+.entry {
+	padding:20px 20px;
+}
+
+.entry p {
+	font-size:1.1em;
+	line-height:1.2em;
+	padding-top:0em;
+	font-family: 'Lato', serif;
+	font-weight:300;
+	margin: 0 0 .1em;
+}
+
+p.compName {
+	color:#ccc;
+	font-size:1.1em;
+	padding-top:0em;
+	font-family: 'Lato', serif;
+	font-weight:700;
+	font-style:italic;
+}
+
+.entry span.glyphicon {
+	font-size: 0.7em;
+	top: 0;
+	/* -webkit-text-stroke: 1px #272b30; */
+}
+
+/* Overriding the color of the line under the header */
+.page-header{
+	border-bottom: 1px solid #bbbbbb;
+}
+
+.bs-docs-section h3 {
+	color:#ccc;
+	font-size:24px;
+	padding-top:1.1;
+	margin-top: 20px;
+	margin-bottom:10;
+	font-family: 'Lato', serif;
+	font-weight:300;
+	font-style:italic;
+}
+
+.bs-docs-section h1 {
+	color:#ccc;
+	font-size:36px;
+	padding-top:1.1;
+	margin-top: 20px;
+	margin-bottom:10;
+	font-family: 'Lato', serif;
+	font-weight:300;
+	font-style:italic;
+}
+
+.jumbotron {
+	background: url(../img/header.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.jumbotron p {
+	margin-top: 12px;
+	/*margin-left: 30px;*/
+	font-size: 15px;
+	
+}
+
+#intro.jumbotron {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.right {
+	text-align: right;
+}
+
+.footer p {
+    color: #ccc;
+    font-size: .75em;
+    line-height: 1.2em;
+    padding: 1.5em;
+    font-family: 'Lato', serif;
+    font-weight: 300;
+}
+
+.footer {
+    text-align: center;
 }
