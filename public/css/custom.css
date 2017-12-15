@@ -170,11 +170,6 @@ p.compName {
 	font-style:italic;
 }
 
-.entry span.glyphicon {
-	font-size: 0.7em;
-	top: 0;
-	/* -webkit-text-stroke: 1px #272b30; */
-}
 
 /* Overriding the color of the line under the header */
 .page-header{
@@ -206,6 +201,7 @@ p.compName {
 .jumbotron {
 	background: url(../img/header.jpg) no-repeat center center;
 	background-size: cover;
+	margin-top: 2rem;
 }
 
 .jumbotron p {
