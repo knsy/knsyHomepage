@@ -174,8 +174,10 @@
 		</div>
 		
 		<div class="col-md-3">
-				<a href="img/spxBMv3.jpg" data-toggle="lightbox"><img src="img/spxBMv3Thmb.jpg" alt="Manufacturing Machine Image" />
+				<a href="img/spxBMv3.jpg" data-toggle="lightbox" data-gallery="gallery-spx-bm" data-title="Brushing Machine V3 Gallery" data-footer="Putting a finish on the parts. 81 parts at a time."><img src="img/spxBMv3Thmb.jpg" alt="Manufacturing Machine Image" />
 				</a>
+				<a href="img/spxBMv3-front.jpg" data-toggle="lightbox" data-gallery="gallery-spx-bm"data-title="Brushing Machine V3 Gallery" data-footer="Multiple thousands of parts later" ></a>
+				<a href="img/spxBMv2.jpg" data-toggle="lightbox" data-gallery="gallery-spx-bm" data-title="Brushing Machine V2" data-footer="Previous incarnation that finished parts one by one. So much machining."></a>
 
 		</div>
 	</div>
@@ -360,11 +362,12 @@
 
 <script>
 $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-                event.preventDefault();
-				                $(this).ekkoLightbox();
-								            });
+         event.preventDefault();
+		 $(this).ekkoLightbox({
+			alwaysShowClose: true
+			});
+		});
 </script>
-<!--<script type="text/javascript" src="js/bootstrap-lightbox.js"></script>--> 
 
 
 <!-- LOAD SCRIPTS -->
