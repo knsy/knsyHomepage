@@ -35,6 +35,13 @@ app.post('/', function(req,res){
 	res.render('knsyWebHome', getContext);
 })
 
+// weatherPage request
+app.get('/weather', function(req,res){
+	var getContext = {};
+	res.render('weatherMap', getContext);
+});
+
+
 
 //--------------------------------POST LOGIN-------------------------------------------
 //login server test	
